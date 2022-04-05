@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind variants;
+@tailwind utilities;
+
+.btn-green {
+    @apply w-10/12 bg-emerald-500 font-medium text-white py-3 rounded-md hover:bg-emerald-600 transition;
+}
+
+.btn-red {
+    @apply px-8 py-2 bg-rose-500 font-medium text-white py-3 rounded-md hover:bg-rose-600 transition;
+}
+
+.input {
+    @apply w-10/12 bg-gray-200 py-2 px-3 rounded-md outline-none;
+}

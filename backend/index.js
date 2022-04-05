@@ -9,6 +9,9 @@ dotenv.config();
 
 // Import all routes
 import getUsersRouter from './routes/getUsers.js';
+import createUserRouter from './routes/createUser.js';
+import loginUserRouter from './routes/loginUser.js';
+import getUserRouter from './routes/getUser.js';
 
 // Express stuff
 const app = express();
@@ -21,6 +24,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 // Setup routes
 app.use('/get-users', getUsersRouter);
+app.use('/create-user', createUserRouter);
+app.use('/login-user', loginUserRouter);
+app.use('/get-user', getUserRouter);
 
 // Setup default route
 app.get('/', (req, res) => {
