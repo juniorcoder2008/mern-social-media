@@ -5,7 +5,7 @@ const Navbar = ({ user, setUser }) => {
 
     const signOut = () => {
         localStorage.removeItem('userID');
-        window.location.reload();
+        window.location.href = '/';
     }
 
     return (

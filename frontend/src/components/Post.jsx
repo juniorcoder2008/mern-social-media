@@ -49,9 +49,9 @@ const Post = ({ data, user, setUser, postList, setPostList }) => {
   }, [])
 
   return (
-    <div className='px-5 py-5 bg-neutral-100 2xl:w-1/3 xl:w-1/2 rounded-xl relative'>
+    <div className='px-5 py-5 bg-neutral-100 2xl:w-1/3 rounded-xl relative'>
         <div className='flex items-center justify-between border-b-2 border-gray-300'>
-            <h1 className='uppercase font-bold text-xl'>{data.title} <span className='text-blue-500 normal-case font-medium text-base ml-1 cursor-pointer'>@{data.author.name}</span></h1>
+            <h1 className='uppercase font-bold text-xl'>{data.title} <span className='text-blue-500 normal-case font-medium text-base ml-1 cursor-pointer'>@{data.author.name} {data.author.name == user.name ? '(You)' : ''}</span></h1>
             <p className='text-gray-500'>{data.postDate}</p>
         </div>
         <div className='mt-3 md'>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CreatePost from '../components/CreatePost';
 
 import Navbar from '../components/Navbar';
+import OwnPosts from '../components/OwnPosts';
 
 const Account = () => {
 
@@ -26,10 +27,13 @@ const Account = () => {
   });
 
   return (
-    <div>
+    <div className=''>
       {showContent ? <div>
         <Navbar user={user} setUser={setUser} />
-        <CreatePost user={user} setUser={setUser} />
+        <div className='grid grid-cols-3'>
+          <CreatePost user={user} setUser={setUser} />
+          <OwnPosts user={user} setUser={setUser} />
+        </div>
       </div> : ''}
     </div>
   )

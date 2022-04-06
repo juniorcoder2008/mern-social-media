@@ -5,8 +5,6 @@ import Home from './pages/Home';
 import NewPost from './pages/NewPost';
 
 const App = () => {
-
-
   return (
     <Router>
       <Routes>
