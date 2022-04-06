@@ -15,6 +15,7 @@ import getUserRouter from './routes/getUser.js';
 
 import getPostsRouter from './routes/getPosts.js';
 import createPostRouter from './routes/createPost.js';
+import addLikeRouter from './routes/addLike.js';
 
 // Express stuff
 const app = express();
@@ -33,6 +34,7 @@ app.use('/get-user', getUserRouter);
 
 app.use('/get-posts', getPostsRouter);
 app.use('/create-post', createPostRouter);
+app.use('/add-like', addLikeRouter);
 
 // Setup default route
 app.get('/', (req, res) => {

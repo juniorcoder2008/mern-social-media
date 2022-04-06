@@ -29,11 +29,11 @@ const CreatePost = ({ user, setUser }) => {
   }
 
   return (
-    <div className='px-10 pt-8'>
+    <div className='px-10 pt-8 post-list'>
       <h1 className='font-bold text-2xl mb-4'>Create a new post</h1>
       <form className='flex flex-col gap-2' onSubmit={createPost}>
-        <input ref={titleRef} type="text" placeholder='Post Title' className='input w-96' />
-        <textarea ref={contentRef} className='input resize-none h-64 w-96' placeholder='Post Content'></textarea>
+        <input ref={titleRef} type="text" placeholder='Post Title' className='input w-96' required />
+        <textarea ref={contentRef} className='input resize-none h-64 w-96' placeholder='Post Content' required></textarea>
         <button type="submit" className='btn-blue w-96'>Create new Post</button>
       </form>
     </div>

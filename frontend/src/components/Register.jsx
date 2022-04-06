@@ -39,13 +39,6 @@ const Register = ({ setAuthMode, authMode }) => {
                 });
             }
         });
-
-        /* if(accountCreationPossible && finalPass == repPass) {
-            axios.post('http://localhost:5000/create-user', { name: name.current.value, email: email.current.value, password: pass.current.value, uid: uid, id: id }).then(() => {
-                console.log('Created user succesfully!');
-                window.location.reload();
-            });
-        } */
     }
 
     return (

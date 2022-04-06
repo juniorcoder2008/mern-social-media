@@ -8,7 +8,8 @@ const postSchema = mongoose.Schema({
         _id: String
     },
     postDate: String,
-    likes: Number
+    likes: Number,
+    likesBy: [String],
 });
 
 const Post = mongoose.model('PostSchema', postSchema);
