@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import PostList from './PostList';
 
 const Content = ({ id }) => {
 
@@ -16,6 +17,7 @@ const Content = ({ id }) => {
         <div>
             {showContent ? <div>
                 <Navbar user={user} setUser={setUser} />
+                <PostList />
             </div> : ''}
         </div>
     )

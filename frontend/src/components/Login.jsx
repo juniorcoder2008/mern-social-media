@@ -25,7 +25,7 @@ const Login = ({ authMode, setAuthMode, userID, setUserID }) => {
                 <input ref={password} type="password" placeholder='Password' className='input relative mx-auto' required />
                 <span className='text-emerald-500 rounded-md cursor-pointer hover:underline text-center mt-5' onClick={() => authMode === 'Register' ? setAuthMode('Login') : setAuthMode('Register')}>Switch to {authMode}</span> 
 
-                <button className='btn-green relative mx-auto'>Login</button>
+                <button className='btn-green w-9/12 relative mx-auto'>Login</button>
             </form>
             
         </div>

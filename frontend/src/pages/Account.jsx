@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import CreatePost from '../components/CreatePost';
 
 import Navbar from '../components/Navbar';
 
@@ -28,6 +29,7 @@ const Account = () => {
     <div>
       {showContent ? <div>
         <Navbar user={user} setUser={setUser} />
+        <CreatePost user={user} setUser={setUser} />
       </div> : ''}
     </div>
   )

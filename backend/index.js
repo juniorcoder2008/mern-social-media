@@ -13,6 +13,9 @@ import createUserRouter from './routes/createUser.js';
 import loginUserRouter from './routes/loginUser.js';
 import getUserRouter from './routes/getUser.js';
 
+import getPostsRouter from './routes/getPosts.js';
+import createPostRouter from './routes/createPost.js';
+
 // Express stuff
 const app = express();
 const PORT = process.env.PORT;
@@ -27,6 +30,9 @@ app.use('/get-users', getUsersRouter);
 app.use('/create-user', createUserRouter);
 app.use('/login-user', loginUserRouter);
 app.use('/get-user', getUserRouter);
+
+app.use('/get-posts', getPostsRouter);
+app.use('/create-post', createPostRouter);
 
 // Setup default route
 app.get('/', (req, res) => {

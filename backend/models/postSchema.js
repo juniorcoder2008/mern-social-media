@@ -3,14 +3,11 @@ import mongoose from "mongoose";
 const postSchema = mongoose.Schema({
     title: String,
     content: String,
-    auth: {
+    author: {
         name: String,
         _id: String
     },
-    postDate: {
-        time: String,
-        date: String
-    },
+    postDate: String,
     likes: Number
 });
 
