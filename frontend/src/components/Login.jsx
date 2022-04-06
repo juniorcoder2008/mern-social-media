@@ -12,7 +12,8 @@ const Login = ({ authMode, setAuthMode, userID, setUserID }) => {
         axios.post('http://localhost:5000/login-user', { email: email.current.value, password: password.current.value }).then(info => {
             console.log(info.data.id);
             setUserID(info.data.id);
-            localStorage.setItem('userID', info.data.id._id);
+            console.log(info.data.id)
+            localStorage.setItem('userID', info.data.id);
         })
     }
 
